@@ -1,4 +1,4 @@
-const { getStore } = require('@netlify/blobs');
+const { getBlobsStore } = require('./_store');
 
 exports.handler = async (event) => {
   try {
@@ -9,7 +9,7 @@ exports.handler = async (event) => {
     if (!body.slug) {
       return { statusCode: 400, body: JSON.stringify({ ok:false, error:'Missing slug' }) };
     }
-    const store = getStore('orders');
+    const store = getBlobsStore('orders');
     const key = 'orders_' + body.slug;
     const existing = await store.get(key, { type: 'text' });
     const orders = existing ? JSON.parse(existing) : [];

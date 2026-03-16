@@ -1,4 +1,4 @@
-const { getStore } = require('@netlify/blobs');
+const { getBlobsStore } = require('./_store');
 
 exports.handler = async (event) => {
   try {
@@ -6,7 +6,7 @@ exports.handler = async (event) => {
     if (!slug) {
       return { statusCode: 400, body: JSON.stringify({ ok:false, error:'Missing slug' }) };
     }
-    const store = getStore('published-storefronts');
+    const store = getBlobsStore('published-storefronts');
     const raw = await store.get(slug, { type: 'text' });
     if (!raw) {
       return { statusCode: 404, body: JSON.stringify({ ok:false, error:'Storefront not found' }) };

@@ -1,4 +1,4 @@
-const { getStore } = require('@netlify/blobs');
+const { getBlobsStore } = require('./_store');
 
 exports.handler = async (event) => {
   try {
@@ -7,7 +7,7 @@ exports.handler = async (event) => {
     if (!slug || !orderId) {
       return { statusCode: 400, body: JSON.stringify({ ok:false, error:'Missing slug or orderId' }) };
     }
-    const store = getStore('orders');
+    const store = getBlobsStore('orders');
     const raw = await store.get('orders_' + slug, { type: 'text' });
     const orders = raw ? JSON.parse(raw) : [];
     const order = orders.find(o => o.id === orderId);

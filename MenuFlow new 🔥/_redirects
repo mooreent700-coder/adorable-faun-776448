@@ -1,0 +1,3 @@
+/shop/:slug  /storefront/index.html?slug=:slug  200
+/dashboard   /dashboard/index.html  200
+/store       /storefront/index.html  200

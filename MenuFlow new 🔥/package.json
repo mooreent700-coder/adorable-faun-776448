@@ -1,0 +1,12 @@
+{
+  "name": "menuflow-complete-netlify-build-ready",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'MenuFlow build ready'",
+    "postinstall": "echo 'Dependencies installed'"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

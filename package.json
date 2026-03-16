@@ -1,0 +1,8 @@
+{
+  "name": "menuflow-phase4-netlify-shared-publish-fix",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

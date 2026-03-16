@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Menu</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script defer src="../assets/js/demo-app.js"></script>
+<script defer src="../assets/js/shared-api.js"></script>
+<script defer src="../assets/js/dashboard-shared.js"></script>
+<script defer src="../assets/js/menu-manager.js"></script>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <strong>MenuFlow</strong>
+    <div class="muted" style="margin-top:8px">Netlify shared publish build</div>
+    <nav class="links">
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="../kitchen/index.html">Kitchen</a>
+      <a href="../storefront/index.html">Storefront</a>
+      <a href="../admin/index.html">Admin</a>
+    </nav>
+    <div class="stack" style="margin-top:18px">
+      <a class="btn" data-site-href href="../storefront/index.html" target="_blank">Open Storefront</a>
+      <button class="btn secondary" id="logoutBtn">Logout</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="stack">
+      <div class="row">
+        <div>
+          <div class="kicker">Menu Manager</div>
+          <h1 style="margin:8px 0 0">Upload menu items with prices and pictures</h1>
+        </div>
+      </div>
+
+      <div class="grid g2">
+        <form id="menuForm" class="card stack">
+          <input name="category" placeholder="Category">
+          <input name="name" placeholder="Item name">
+          <textarea name="description" placeholder="Description"></textarea>
+          <input name="price" type="number" step="0.01" placeholder="Price">
+          <label class="muted">Item picture upload</label>
+          <input name="image" type="file" accept="image/*">
+          <button class="btn" type="submit">Add Menu Item</button>
+          <button class="btn secondary" id="publishMenuBtn" type="button">Publish Website</button>
+          <div id="menuPublishStatus" class="publish-note muted">Website link appears only after publish succeeds.</div>
+        </form>
+        <div class="card stack">
+          <strong>Store website link (goes live after publish)</strong>
+          <div class="site-link muted" data-site-link></div>
+          <a class="btn secondary" data-site-href href="../storefront/index.html" target="_blank">Open Website</a>
+        </div>
+      </div>
+
+      <div class="card stack">
+        <strong>Current menu</strong>
+        <div id="menuList" class="stack"></div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

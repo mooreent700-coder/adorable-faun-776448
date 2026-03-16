@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Storefront</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script defer src="../assets/js/demo-app.js"></script>
+<script defer src="../assets/js/shared-api.js"></script>
+<script defer src="../assets/js/storefront.js"></script>
+</head>
+<body>
+<section class="hero-image">
+  <img id="heroImage" src="">
+  <div class="hero-copy">
+    <div class="badge">Storefront</div>
+    <h1 id="heroTitle" style="margin:12px 0 10px;font-size:54px">Your Business</h1>
+    <p id="heroSubtitle" class="muted" style="font-size:18px"></p>
+  </div>
+</section>
+<div class="info-strip">
+  <div class="pill">Pickup available</div>
+  <div class="pill">Fresh daily</div>
+  <div class="pill" id="slugPill">slug</div>
+</div>
+<div class="container">
+  <div class="row"><strong>Menu</strong></div>
+  <div id="menuGrid" class="grid g3" style="margin-top:18px"></div>
+</div>
+
+<button id="cartBtn" class="btn sticky-cart" type="button">View Order (0)</button>
+
+<div id="cartModal" class="modal">
+  <div class="card modal-card stack">
+    <div class="row">
+      <strong>Your Order</strong>
+      <button id="closeCart" class="btn secondary" type="button">Close</button>
+    </div>
+    <div id="cartItems" class="stack"></div>
+    <div class="row">
+      <strong>Total</strong>
+      <strong id="cartTotal">$0.00</strong>
+    </div>
+    <form id="checkoutForm" class="stack">
+      <input name="customerName" placeholder="Full name">
+      <input name="customerPhone" placeholder="Phone">
+      <button class="btn" type="submit">Place Order</button>
+    </form>
+    <div id="orderMsg" class="muted"></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orders</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script defer src="../assets/js/demo-app.js"></script>
+<script defer src="../assets/js/shared-api.js"></script>
+<script defer src="../assets/js/dashboard-shared.js"></script>
+<script defer src="../assets/js/orders-manager.js"></script>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <strong>MenuFlow</strong>
+    <div class="muted" style="margin-top:8px">Netlify shared publish build</div>
+    <nav class="links">
+      <a href="../dashboard/index.html">Dashboard</a>
+      <a href="../dashboard/menu.html">Menu</a>
+      <a href="../dashboard/orders.html" class="active">Orders</a>
+      <a href="../kitchen/index.html">Kitchen</a>
+      <a href="../storefront/index.html">Storefront</a>
+      <a href="../admin/index.html">Admin</a>
+    </nav>
+    <div class="stack" style="margin-top:18px">
+      <a class="btn" data-site-href href="../storefront/index.html" target="_blank">Open Storefront</a>
+      <button class="btn secondary" id="logoutBtn">Logout</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="stack">
+      <div class="row">
+        <div>
+          <div class="kicker">Orders</div>
+          <h1 style="margin:8px 0 0">Owner orders screen</h1>
+        </div>
+        <span class="badge">Cross-device orders enabled</span>
+      </div>
+      <div id="ordersList" class="stack"></div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

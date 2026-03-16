@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script defer src="../assets/js/demo-app.js"></script>
+<script defer src="../assets/js/dashboard-shared.js"></script>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <strong>MenuFlow</strong>
+    <div class="muted" style="margin-top:8px">Working Demo</div>
+    <nav class="links">
+      <a href="../dashboard/index.html">Dashboard</a>
+      <a href="../dashboard/menu.html">Menu</a>
+      <a href="../dashboard/orders.html" >Orders</a>
+      <a href="../kitchen/index.html" >Kitchen</a>
+      <a href="../storefront/index.html">Storefront</a>
+      <a href="../admin/index.html" class='active'>Admin</a>
+    </nav>
+    <div class="stack" style="margin-top:18px">
+      <button class="btn secondary" id="logoutBtn">Logout</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="card stack">
+      <div class="kicker">Admin</div>
+      <h1 style="margin:0">Admin</h1>
+      <div class="muted">Signed in as <span data-user-name></span> for <span data-biz-name></span>.</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

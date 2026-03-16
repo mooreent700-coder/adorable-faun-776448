@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script defer src="../assets/js/demo-app.js"></script>
+<script defer src="../assets/js/shared-api.js"></script>
+<script defer src="../assets/js/dashboard-shared.js"></script>
+<script defer src="../assets/js/dashboard-home.js"></script>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <strong>MenuFlow</strong>
+    <div class="muted" style="margin-top:8px">Netlify shared publish build</div>
+    <nav class="links">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="../kitchen/index.html">Kitchen</a>
+      <a href="../storefront/index.html">Storefront</a>
+      <a href="../admin/index.html">Admin</a>
+    </nav>
+    <div class="stack" style="margin-top:18px">
+      <a class="btn" data-site-href href="../storefront/index.html" target="_blank">Open Storefront</a>
+      <button class="btn secondary" id="logoutBtn">Logout</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="stack">
+      <div class="row">
+        <div>
+          <div class="kicker">Owner Dashboard</div>
+          <h1 style="margin:8px 0 0">Welcome, <span data-user-name></span></h1>
+        </div>
+        <span class="badge">Shared links enabled</span>
+      </div>
+
+      <div class="grid g3">
+        <div class="card"><strong>Business Name</strong><div style="margin-top:8px" data-biz-name></div></div>
+        <div class="card"><strong>Business Slug</strong><div style="margin-top:8px" data-biz-slug></div></div>
+        <div class="card"><strong>Store Website Link (goes live after publish)</strong><div class="site-link muted" style="margin-top:8px" data-site-link></div></div>
+      </div>
+
+      <div class="grid g2">
+        <div class="card stack">
+          <strong>Storefront settings</strong>
+          <input id="bizName" placeholder="Business name">
+          <input id="heroTitle" placeholder="Hero title">
+          <textarea id="heroSubtitle" placeholder="Hero subtitle"></textarea>
+          <label class="muted">Hero picture upload</label>
+          <input id="heroFile" type="file" accept="image/*">
+          <button class="btn" id="saveBiz" type="button">Save Storefront</button>
+          <button class="btn secondary" id="publishWebsiteBtn" type="button">Publish Website</button>
+          <button class="btn secondary" id="copyWebsiteBtn" type="button">Copy Website Link</button>
+          <div id="publishStatus" class="publish-note muted">Website link appears only after publish succeeds.</div>
+        </div>
+        <div class="card stack">
+          <strong>Storefront preview</strong>
+          <img id="heroPreview" style="width:100%;height:260px;object-fit:cover;border-radius:14px" src="">
+          <div id="heroPreviewTitle"></div>
+          <div id="heroPreviewSubtitle" class="muted"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
